@@ -2,8 +2,10 @@ import RazorpayButton from "./RazorpayButton";
 
 const Payment = () => {
   return (
-    <div className="payment">
-      <RazorpayButton />
+    <div className="main">
+      <div className="payment">
+        <RazorpayButton />
+      </div>
     </div>
   );
 };

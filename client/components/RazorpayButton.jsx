@@ -1,6 +1,8 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const RazorpayButton = () => {
+  const navigate = useNavigate();
   const loadRazorpay = () => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
@@ -20,7 +22,7 @@ const RazorpayButton = () => {
       {
         headers: {
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4Mjg4NmY0MzYzNGQ2MTZjODM2NDIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTE1MDcyNiwiZXhwIjoxNzIxNzQyNzI2fQ.TI3XXmOngwG8jDTU_0nz8CZTSgeVtjGK4WaFDETFarQ"
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4NWViOGY0MzYzNGQ2MTZjODM2YTUiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTE2NDYwMCwiZXhwIjoxNzIxNzU2NjAwfQ._daNNbPC-rP6_CTPg8_KITpa-iJhvehQpq5zqc0ursA"
         }
       }
     );
@@ -48,12 +50,28 @@ const RazorpayButton = () => {
             {
               headers: {
                 Authorization:
-                  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4Mjg4NmY0MzYzNGQ2MTZjODM2NDIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTE1MDcyNiwiZXhwIjoxNzIxNzQyNzI2fQ.TI3XXmOngwG8jDTU_0nz8CZTSgeVtjGK4WaFDETFarQ"
+                  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4NWViOGY0MzYzNGQ2MTZjODM2YTUiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTE2NDYwMCwiZXhwIjoxNzIxNzU2NjAwfQ._daNNbPC-rP6_CTPg8_KITpa-iJhvehQpq5zqc0ursA"
               }
             }
           )
           .then((res) => {
             console.log(res.data);
+
+            if (res.data.success) {
+              navigate("/result", {
+                state: {
+                  paymentId: response.razorpay_payment_id,
+                  success: true
+                }
+              });
+            } else {
+              navigate("/result", {
+                state: {
+                  paymentId: null,
+                  success: false
+                }
+              });
+            }
           })
           .catch((err) => {
             console.log(err);
