@@ -1,8 +1,3 @@
-# React + Vite
+## Razorpay react impleementation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a simple react app that uses the razorpay payment gateway to accept payments. To test this app, replace the Bearer token in the `src/components/RazorpayButton.jsx` with new token generated from the api;

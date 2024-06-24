@@ -1,9 +1,9 @@
 import "./App.css";
 import "../styles/style.css";
 // import Navbar from "../components/Navbar";
-import Payment from "../components/Payment";
+import Payment from "./components/Payment";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Result from "../pages/Result";
+import Result from "./pages/Result";
 
 function App() {
   return (

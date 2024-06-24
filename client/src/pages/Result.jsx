@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 
 const Result = () => {
   const location = useLocation();
-  const { paymentId, success } = location.state || {}; // Destructuring the state object
+  const { paymentId, success } = location.state || {};
   return (
     <div className="result-container">
       <div className="result-card">

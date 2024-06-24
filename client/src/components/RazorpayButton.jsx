@@ -23,7 +23,7 @@ const RazorpayButton = () => {
         {
           headers: {
             Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4NWViOGY0MzYzNGQ2MTZjODM2YTUiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTE2NDYwMCwiZXhwIjoxNzIxNzU2NjAwfQ._daNNbPC-rP6_CTPg8_KITpa-iJhvehQpq5zqc0ursA"
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4ZmE3YWY0MzYzNGQ2MTZjODM2YzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTIwNDQ3NCwiZXhwIjoxNzIxNzk2NDc0fQ.rTOOC-rV7qyqwPbPZvQ88MzmtbrAsZx1mi9IP_gnXbQ"
           }
         }
       );
@@ -48,7 +48,7 @@ const RazorpayButton = () => {
               {
                 headers: {
                   Authorization:
-                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4NWViOGY0MzYzNGQ2MTZjODM2YTUiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTE2NDYwMCwiZXhwIjoxNzIxNzU2NjAwfQ._daNNbPC-rP6_CTPg8_KITpa-iJhvehQpq5zqc0ursA"
+                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4ZmE3YWY0MzYzNGQ2MTZjODM2YzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTIwNDQ3NCwiZXhwIjoxNzIxNzk2NDc0fQ.rTOOC-rV7qyqwPbPZvQ88MzmtbrAsZx1mi9IP_gnXbQ"
                 }
               }
             )
